@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Case vacanze eleganti vicino al mare. Scopri gli appartamenti esclusive per una vacanza rilassante.">
+  <title>Blu Ionico - Case Vacanze</title>
+
+  <!-- Google Fonts -->
+  <!--<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">-->
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="container nav-container">
+    <div class="logo">Blu Ionico</div>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#case">Appartamenti</a></li>
+      <li><a href="attrazioni.html">Dintorni</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </div>
+</nav>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Eleganza e Relax per la tua Vacanza</h1>
+      <p>Scopri i nostri appartamenti esclusivi immersi nella bellezza del territorio.</p>
+      <a href="#case" class="btn-primary">Scopri gli appartamenti</a>
+    </div>
+  </header>
+
+  <!-- LE CASE -->
+  <section id="case" class="section">
+    <div class="container">
+      <h2 class="section-title">I Nostri Appartamenti</h2>
+        <p class="section-subtitle">
+          Tre strutture pensate per offrire comfort, tranquillità e autenticità.
+        </p>
+
+      <div class="grid">
+
+        <a href="fichidindia.html" class="card card-link">
+          <img src="img/fichi_d'india/esterno_1.jpg" alt="Fichi D'India">
+          
+          <div class="card-content">
+            <h3>Fichi d'India</h3>
+          </div>
+        </a>
+
+        <a href="levele.html" class="card card-link">
+          <img src="img/le_vele/esterno_2.jpg" alt="Le Vele">
+          
+          <div class="card-content">
+            <h3>Le Vele</h3>
+          </div>
+        </a>
+
+        <a href="centopassi.html" class="card card-link">
+          <img src="img/cento_passi/esterno_1.jpg" alt="Cento Passi">
+          
+          <div class="card-content">
+            <h3>Cento Passi</h3>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHE SCEGLIERCI -->
+  <section class="section alt-bg">
+    <div class="container features">
+      <div>
+        <h3>Posizione Strategica</h3>
+        <p>Vicino al mare e ai principali punti di interesse.</p>
+      </div>
+
+      <div>
+        <h3>Standard Elevati</h3>
+        <p>Comfort, pulizia e cura dei dettagli in ogni ambiente.</p>
+      </div>
+
+      <div>
+        <h3>Esperienza Autentica</h3>
+        <p>Vivrai il territorio come un vero abitante del luogo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+  <div class="container">
+    <h2 class="section-title">I Nostri Servizi</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-content center">
+          <h3>WiFi gratuito</h3>
+          <p>Connessione veloce in tutte le strutture.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content center">
+          <h3>Self Check-in</h3>
+          <p>Arriva quando vuoi in totale autonomia.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content center">
+          <h3>Parcheggio</h3>
+          <p>Posti auto disponibili nelle vicinanze.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ESPERIENZA -->
+  <section class="experience">
+    <div class="experience-content">
+      <h2>Vivi il mare, la quiete e il tempo lento</h2>
+      <p>
+        I nostri appartamenti sono pensate per chi desidera rallentare,
+        godersi il mare e scoprire la bellezza autentica del territorio.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>Blu Ionico</h3>
+        <p>Case vacanze vicino al mare.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#case">Appartamenti</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Blu Ionico</p>
+  </footer>
+
+  <script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+  </script>
+
+</body>
+</html>
