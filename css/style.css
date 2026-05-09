@@ -908,14 +908,42 @@ h3 {
 /*DINTORNI*/
 @media (max-width: 768px) {
   .hero-attrazioni h1 { font-size: 2rem; }
-  .featured-card { grid-template-columns: 1fr; }
-  .featured-img { min-height: 220px; }
-  .featured-body { padding: 24px; }
+  .featured-card {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto;
+  }
+  .featured-img {
+    min-height: 220px;
+  }
+
+  .featured-img img {
+    height: 220px;
+  }
+
+  .featured-body {
+    padding: 20px;
+  }
   .footer-content { flex-direction: column; gap: 20px; text-align: center; }
   .footer-links { flex-direction: column; gap: 10px; }
     .logo {
     font-size: 1rem;
   }
+
+    .nav-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  body {
+    padding-top: 90px; /* aumenta per compensare la navbar più alta */
+  }
+
 
   .nav-links {
     gap: 15px;
