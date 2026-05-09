@@ -500,6 +500,7 @@
 
     <!-- CONTATORE -->
     <div id="gallery-counter" class="gallery-counter"></div>
+    <div class="gallery-strip" id="galleryStrip"></div>
 
   </div>
 </div>
@@ -528,37 +529,56 @@ function openGallery(card) {
   }));
 
   currentIndex = 0;
-
+  buildStrip();                                          
   document.getElementById("gallery-modal").classList.add("show");
+  document.body.style.overflow = "hidden";
   updateImage();
 }
 
 function closeGallery() {
   document.getElementById("gallery-modal").classList.remove("show");
+  document.body.style.overflow = "";
+}
+
+function buildStrip() {
+  const strip = document.getElementById("galleryStrip");
+  strip.innerHTML = "";
+  currentGallery.forEach((item, i) => {
+    const thumb = document.createElement("img");
+    thumb.src = item.src;
+    thumb.alt = item.title || "";
+    thumb.onclick = (e) => { e.stopPropagation(); showImage(i); };
+    strip.appendChild(thumb);
+  });
+}
+
+function showImage(index) {
+  currentIndex = index;
+  const item = currentGallery[index];
+  document.getElementById("gallery-image").src = item.src;
+  document.getElementById("gallery-title").innerText = item.title || "";
+  document.getElementById("gallery-counter").innerText = `${index + 1} / ${currentGallery.length}`;
+
+  const thumbs = document.querySelectorAll("#galleryStrip img");
+  thumbs.forEach((t, i) => t.classList.toggle("active", i === index));
+
+  const strip = document.getElementById("galleryStrip");
+  const active = thumbs[index];
+  if (active) {
+    strip.scrollTo({
+      left: active.offsetLeft - strip.clientWidth / 2 + active.clientWidth / 2,
+      behavior: "smooth"
+    });
+  }
 }
 
 function updateImage() {
-  const imageEl = document.getElementById("gallery-image");
-  const titleEl = document.getElementById("gallery-title");
-  const counterEl = document.getElementById("gallery-counter");
-
-  const current = currentGallery[currentIndex];
-
-  imageEl.src = current.src;
-  titleEl.innerText = current.title || "";
-
-  counterEl.innerText = `${currentIndex + 1} / ${currentGallery.length}`;
+  showImage(currentIndex); 
 }
 
-function nextImage() {
-  currentIndex = (currentIndex + 1) % currentGallery.length;
-  updateImage();
-}
+function nextImage() { showImage((currentIndex + 1) % currentGallery.length); }
+function prevImage() { showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length); }
 
-function prevImage() {
-  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-  updateImage();
-}
 
 /* ---------------- INTERAZIONI EXTRA ---------------- */
 
