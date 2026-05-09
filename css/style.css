@@ -91,15 +91,9 @@ h3 {
 .nav-links a:hover::after {
   width: 100%;
 }
-/* CONTAINER */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
 
 .section {
-  padding: 80px 0;
+  padding: 70px 0 60px;
 }
 
 .section-title {
@@ -167,6 +161,8 @@ h3 {
   border-radius: 30px;
   transition: all 0.3s ease;
   font-weight: 500;
+  border: none;        /* aggiunto */
+  cursor: pointer;     /* aggiunto */
 }
 
 .btn-primary:hover {
@@ -512,6 +508,10 @@ h3 {
   z-index: 1;
   max-width: 700px;
   margin: auto;
+}
+
+.experience-content p {
+  margin-top: 10px; /* aumenta o diminuisci a piacere */
 }
 
 /* FOOTER */
@@ -958,9 +958,6 @@ h3 {
   margin: auto;
 }
 
-.section { 
-  padding: 70px 0 60px; 
-}
 
 .section-divider {
   display: flex; 
@@ -1185,26 +1182,6 @@ h3 {
   background: #ede8e3; 
   color: #6f5f53; 
   font-weight: 500;
-}
-
-.btn-primary {
-  display: inline-block;
-  background: #8c7a6b; 
-  color: white;
-  padding: 12px 28px; 
-  text-decoration: none;
-  border-radius: 30px; 
-  font-size: 0.85rem; 
-  font-weight: 600;
-  transition: background 0.25s, transform 0.2s;
-  align-self: flex-start;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary:hover { 
-  background: #2a5f9e; 
-  transform: translateY(-2px); 
 }
 
 /* ─── GRIGLIA CARD PICCOLE ─── */
