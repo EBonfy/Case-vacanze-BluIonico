@@ -913,6 +913,42 @@ h3 {
   .featured-body { padding: 24px; }
   .footer-content { flex-direction: column; gap: 20px; text-align: center; }
   .footer-links { flex-direction: column; gap: 10px; }
+    .logo {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  /* DINTORNI — da 4 colonne a 1 */
+  .info-columns-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* REGOLE — da 2 colonne a 1 */
+  .info-columns-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* GALLERIA — fix modale su mobile */
+  .gallery-slider img {
+    max-height: 60vh;
+    max-width: 100%;
+  }
+
+  .gallery-strip img {
+    height: 44px;
+    width: 60px;
+  }
+
+  .gallery-counter {
+    bottom: 80px;
+  }
 }
 
 .no-results {
