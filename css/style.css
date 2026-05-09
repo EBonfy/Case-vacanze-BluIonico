@@ -907,7 +907,28 @@ h3 {
 
 /*DINTORNI*/
 @media (max-width: 768px) {
-  .hero-attrazioni h1 { font-size: 2rem; }
+    .hero-attrazioni h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-attrazioni p {
+    font-size: 0.85rem;
+    margin: 0 auto 20px;
+  }
+
+  .hero-attrazioni .eyebrow {
+    font-size: 0.65rem;
+  }
+
+  .filtro-btn {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+  }
+
+  .hero-attrazioni {
+    height: auto;
+    padding: 60px 20px 40px;
+  }
   .featured-card {
     grid-template-columns: 1fr !important;
     grid-template-rows: auto;
